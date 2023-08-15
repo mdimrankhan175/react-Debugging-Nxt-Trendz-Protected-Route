@@ -8,6 +8,7 @@ const ProtectedRoute = props => {
     return <Redirect to="/login" />
   }
 
+  // FIX1: The spread operator should be used while sending the props
   return <Route {...props} />
 }
 

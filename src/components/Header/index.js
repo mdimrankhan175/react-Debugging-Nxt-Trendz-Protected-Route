@@ -6,7 +6,7 @@ import './index.css'
 const Header = props => {
   const onClickLogout = () => {
     const {history} = props
-
+    // FIX7: The Cookie is set with the key "jwt_token" so it should be removed using the same key
     Cookies.remove('jwt_token')
     history.replace('/login')
   }
@@ -104,4 +104,5 @@ const Header = props => {
   )
 }
 
+// FIX8: Header component should be wrapped with withRouter() to access history
 export default withRouter(Header)
